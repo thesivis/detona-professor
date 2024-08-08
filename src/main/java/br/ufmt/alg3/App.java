@@ -9,20 +9,23 @@ public class App
 {
     public static void main( String[] args )
     {
-        Curso[] respostas;
-        respostas = new Curso[3];
-        Scanner teclado;
-        teclado = new Scanner(System.in);
-        for(int i = 0; i < respostas.length; i++) {
-            Curso c = new Curso();
-            System.out.print("Digite o nome do curso:");
-            String nome = teclado.nextLine();
-            c.setNome(nome);
-            System.out.println("O nome digitado foi:" + c.getNome());
-            respostas[i] = c;
-        }
-        for (Curso curso : respostas) {
-            System.out.println("Curso avaliado: " + curso.getNome());
-        }
+        Identificador c = new Curso();
+        c.setNome("SI");
+        imprimir(c, (Professor) c);
+    }
+
+    public static void imprimir(Identificador i, Professor p){
+        System.out.println("Identificador Duplo");
+        System.out.println(i.imprimir());
+    }
+
+    public static void imprimir(Identificador i){
+        System.out.println("Identificador");
+        System.out.println(i.imprimir());
+    }
+
+    public static void imprimir(Professor i){
+        System.out.println("Professor");
+        System.out.println(i.imprimir());
     }
 }
