@@ -3,15 +3,19 @@ package br.ufmt.alg3;
 import java.util.Scanner;
 
 import br.ufmt.alg3.curso.Curso;
+import br.ufmt.alg3.curso.CursoDAO;
+import br.ufmt.alg3.curso.CursoDAOImpl;
 import br.ufmt.alg3.professor.Professor;
 
 public class App
 {
     public static void main( String[] args )
     {
-        Identificador c = new Curso();
+        // https://github.com/thesivis/detona-professor
+        Curso c = new Curso();
         c.setNome("SI");
-        imprimir(c, (Professor) c);
+        CursoDAO banco = new CursoDAOImpl();
+        banco.inserir(c);
     }
 
     public static void imprimir(Identificador i, Professor p){

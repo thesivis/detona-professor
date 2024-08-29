@@ -1,10 +1,12 @@
 package br.ufmt.alg3;
 
-public class Identificador {
+public abstract class Identificador {
     protected String nome;
     private String semestre; // 2024/1
     private float nota; // Estrela 0-5 fracionada
     private String comentario;
+
+
 
     public String getNome() {
         return nome;
@@ -38,7 +40,5 @@ public class Identificador {
         this.comentario = comentario;
     }
 
-    public String imprimir(){
-        return "Identificador: " + nome;
-    }
+    public abstract String imprimir();
 }

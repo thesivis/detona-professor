@@ -32,4 +32,7 @@ public class Professor extends Identificador {
         this.departamento = departamento;
     }
 
+    public String imprimir(){
+        return "Professor: " + nome;
+    }
 }
