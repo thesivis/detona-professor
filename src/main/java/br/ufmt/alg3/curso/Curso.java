@@ -16,6 +16,12 @@ public class Curso extends Identificador {
         this.periodo = "Noturno";
     }
 
+    public void validar() throws Exception {
+        if (nome == null) {
+            throw new Exception("Nome obrigatório");
+        }
+    }
+
     public void setRga(String rga){
         this.rga = rga;
     }

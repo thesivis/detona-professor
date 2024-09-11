@@ -18,18 +18,4 @@ public class App
         banco.inserir(c);
     }
 
-    public static void imprimir(Identificador i, Professor p){
-        System.out.println("Identificador Duplo");
-        System.out.println(i.imprimir());
-    }
-
-    public static void imprimir(Identificador i){
-        System.out.println("Identificador");
-        System.out.println(i.imprimir());
-    }
-
-    public static void imprimir(Professor i){
-        System.out.println("Professor");
-        System.out.println(i.imprimir());
-    }
 }
