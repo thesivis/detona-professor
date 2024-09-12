@@ -26,9 +26,14 @@ public class CursoDAOImpl implements CursoDAO {
 
     public void atualizar(Curso curso){
         System.out.println("Atualizando curso");
-        int idx = banco.indexOf(curso);
-        if (idx != Utils.NAO_ACHOU) {
-            banco.set(idx, curso);
+        try {
+            curso.validar();
+            int idx = banco.indexOf(curso);
+            if (idx != Utils.NAO_ACHOU) {
+                banco.set(idx, curso);
+            }
+        } catch (Exception erro) {
+            System.out.println(erro.getMessage());
         }
     }
 
